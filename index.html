@@ -1,347 +1,253 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PANTERAS BASKETBALL | OFFICIAL HOME</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@300;700&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-container": "#e3e6ff",
-                    "on-secondary-fixed-variant": "#474646",
-                    "tertiary": "#c6c6c7",
-                    "on-primary-fixed-variant": "#0039b3",
-                    "inverse-on-surface": "#2e303a",
-                    "error": "#ffb4ab",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-highest": "#32343f",
-                    "surface-bright": "#373943",
-                    "on-tertiary-fixed-variant": "#454747",
-                    "outline": "#8d90a2",
-                    "outline-variant": "#434656",
-                    "secondary-container": "#4a4949",
-                    "inverse-surface": "#e1e1ef",
-                    "surface": "#11131c",
-                    "tertiary-fixed": "#e2e2e2",
-                    "secondary-fixed": "#e5e2e1",
-                    "secondary-fixed-dim": "#c9c6c5",
-                    "background": "#11131c",
-                    "error-container": "#93000a",
-                    "on-error": "#690005",
-                    "primary-fixed-dim": "#b6c4ff",
-                    "surface-container-low": "#191b25",
-                    "on-surface": "#e1e1ef",
-                    "surface-container-lowest": "#0c0e17",
-                    "surface-dim": "#11131c",
-                    "secondary": "#c9c6c5",
-                    "on-secondary-container": "#bab8b7",
-                    "surface-container-high": "#282933",
-                    "tertiary-container": "#666868",
-                    "on-primary-fixed": "#001551",
-                    "on-primary": "#002780",
-                    "on-surface-variant": "#c3c5d9",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "primary": "#b6c4ff",
-                    "surface-tint": "#b6c4ff",
-                    "on-tertiary": "#2f3131",
-                    "inverse-primary": "#004dea",
-                    "surface-container": "#1d1f29",
-                    "surface-variant": "#32343f",
-                    "primary-fixed": "#dce1ff",
-                    "primary-container": "#0055ff",
-                    "on-tertiary-container": "#e7e7e7",
-                    "on-background": "#e1e1ef",
-                    "on-secondary": "#313030",
-                    "tertiary-fixed-dim": "#c6c6c7",
-                    "on-tertiary-fixed": "#1a1c1c"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "margin-mobile": "16px",
-                    "container-max": "1280px",
-                    "gutter": "24px",
-                    "margin-desktop": "40px",
-                    "unit": "8px"
-            },
-            "fontFamily": {
-                    "body-lg": ["Hanken Grotesk"],
-                    "label-caps": ["Space Grotesk"],
-                    "headline-lg": ["Anton"],
-                    "headline-lg-mobile": ["Anton"],
-                    "title-md": ["Hanken Grotesk"],
-                    "display-xl": ["Anton"],
-                    "body-sm": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                    "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["32px", {"lineHeight": "32px", "fontWeight": "400"}],
-                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
-                    "display-xl": ["96px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .skew-card { transform: skewX(-4deg); }
-        .skew-reverse { transform: skewX(4deg); }
-        .energy-glow:hover { box-shadow: 0 0 20px rgba(182, 196, 255, 0.4); }
-        .hard-shadow { box-shadow: 4px 4px 0px #ffffff; }
-        .hard-shadow:hover { box-shadow: 0px 0px 0px #ffffff; transform: translate(2px, 2px); }
-        .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
-    </style>
-</head>
-<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="bg-surface border-b-2 border-outline-variant fixed top-0 w-full z-50">
-<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
-<div class="font-headline-lg text-headline-lg uppercase tracking-tighter text-primary">
-                PANTERAS
-            </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 active:skew-x-12 transition-transform" href="index.html">Home</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="shop.html">Shop</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="team.html">Team</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="lineup.html">Lineup</a>
-</div>
-<div class="flex items-center gap-6">
-<div class="flex gap-4">
-<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="shopping_cart">shopping_cart</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="person">person</span>
-</div>
-<button class="hidden md:block bg-primary text-on-primary font-label-caps text-label-caps px-8 py-3 hard-shadow transition-all">
-                    Tickets
-                </button>
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
-</button>
-</div>
-</nav>
-</header>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative h-[921px] min-h-[600px] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full" data-alt="A cinematic action shot of a professional basketball player in a black and electric blue Panteras uniform soaring through the air for a powerful dunk. High-contrast stadium lighting creates dramatic highlights and shadows. The background features a blurred crowd in a dark arena with neon blue accents. The visual style is aggressive, sharp, and high-intensity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB38u4Jdhp0BtVoffovFj7fugDa1UTZ9GJcqL-NaOdxhSvb6qSOiVfEhMTx-LjKWGjQW4nExI66Mk6HmDNB_gQMoYfPkOYhCKhORm4Dy6jXEulNJoB_bGjEdhFs023LnW7ugWLePIK3i4W_132_Yfa_rNIEqcwYYoEVhtiWAxvLMcrcPtMhttvFuAnOSNwkCqKGaHwOAckjyOB6SQLC5QsuvCdWVFLxET03_LWFhiJE0P7n8ihT78V-Pg')"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
-</div>
-<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
-<div class="max-w-2xl">
-<div class="flex items-center gap-3 mb-6">
-<span class="w-12 h-[2px] bg-primary"></span>
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.3em]">Season 2024/25</span>
-</div>
-<h1 class="font-display-xl text-display-xl uppercase mb-8 leading-none">
-                        LEAVE THE <br/> <span class="text-primary italic">SHADOWS</span> BEHIND
-                    </h1>
-<div class="flex flex-wrap gap-6">
-<button class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 text-lg hard-shadow transition-all skew-card">
-<span class="skew-reverse inline-block">WATCH RECAP</span>
-</button>
-<a href="team.html" class="border-2 border-primary text-primary font-label-caps text-label-caps px-10 py-5 text-lg hover:bg-primary/10 transition-all skew-card inline-block">
-<span class="skew-reverse inline-block">MEET THE SQUAD</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Kinetic Sidebar Decor -->
-<div class="absolute right-0 top-0 h-full w-24 hidden lg:flex flex-col justify-center items-center gap-12 bg-surface-container-lowest/80 backdrop-blur-md">
-<span class="vertical-text font-label-caps text-label-caps text-on-surface-variant tracking-[1em] uppercase">Aggression</span>
-<span class="vertical-text font-label-caps text-label-caps text-primary tracking-[1em] uppercase">Precision</span>
-<span class="vertical-text font-label-caps text-label-caps text-on-surface-variant tracking-[1em] uppercase">Speed</span>
-</div>
-</section>
-<!-- Match Countdown & Quick Stats Bento -->
-<section class="px-margin-desktop py-20 max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Countdown Card -->
-<div class="md:col-span-8 bg-surface-container border border-outline-variant p-8 relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-4">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 bg-primary rounded-full animate-pulse"></span>
-<span class="font-label-caps text-label-caps text-primary">NEXT GAME</span>
-</div>
-</div>
-<div class="flex flex-col md:flex-row items-center justify-between gap-12 mt-8">
-<div class="text-center md:text-left">
-<h3 class="font-headline-lg text-headline-lg mb-2">PANTERAS</h3>
-<p class="font-body-sm text-on-surface-variant">HOME ARENA</p>
-</div>
-<div class="flex flex-col items-center">
-<div class="font-display-xl text-display-xl text-primary flex gap-4">
-<div class="flex flex-col items-center"><span id="days">02</span><span class="text-[10px] font-label-caps tracking-widest text-on-surface-variant mt-2 uppercase">Days</span></div>
-<span>:</span>
-<div class="flex flex-col items-center"><span id="hours">14</span><span class="text-[10px] font-label-caps tracking-widest text-on-surface-variant mt-2 uppercase">Hrs</span></div>
-<span>:</span>
-<div class="flex flex-col items-center"><span id="mins">45</span><span class="text-[10px] font-label-caps tracking-widest text-on-surface-variant mt-2 uppercase">Min</span></div>
-</div>
-<div class="mt-8 bg-on-surface text-surface px-6 py-2 font-label-caps text-label-caps font-bold">OCT 24, 2024</div>
-</div>
-<div class="text-center md:text-right">
-<h3 class="font-headline-lg text-headline-lg mb-2 text-on-surface-variant opacity-50">TITANS</h3>
-<p class="font-body-sm text-on-surface-variant">AWAY TEAM</p>
-</div>
-</div>
-</div>
-<!-- Standings Mini Card -->
-<div class="md:col-span-4 bg-primary text-on-primary p-8 skew-card">
-<div class="skew-reverse h-full flex flex-col">
-<h4 class="font-headline-lg text-headline-lg leading-none mb-6">STANDINGS</h4>
-<div class="space-y-4 flex-grow">
-<div class="flex justify-between items-center border-b border-on-primary/30 pb-2">
-<span class="font-title-md text-title-md">1. WOLVES</span>
-<span class="font-label-caps text-label-caps">12-2</span>
-</div>
-<div class="flex justify-between items-center border-b border-on-primary pb-2 font-bold bg-on-primary/10 px-2 -mx-2">
-<span class="font-title-md text-title-md">2. PANTERAS</span>
-<span class="font-label-caps text-label-caps">11-3</span>
-</div>
-<div class="flex justify-between items-center border-b border-on-primary/30 pb-2">
-<span class="font-title-md text-title-md">3. EAGLES</span>
-<span class="font-label-caps text-label-caps">10-4</span>
-</div>
-</div>
-<a class="mt-8 font-label-caps text-label-caps underline hover:no-underline transition-all" href="lineup.html">VIEW FULL TABLE</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Latest News -->
-<section class="bg-surface-container-lowest py-24">
-<div class="px-margin-desktop max-w-container-max mx-auto">
-<div class="flex justify-between items-end mb-16">
-<div>
-<span class="font-label-caps text-label-caps text-primary tracking-[0.4em] uppercase">The Pulse</span>
-<h2 class="font-headline-lg text-headline-lg uppercase mt-4">LATEST NEWS</h2>
-</div>
-<a class="hidden md:flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all" href="shop.html">
-                        VIEW ALL <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-<!-- News Item 1 -->
-<div class="group cursor-pointer">
-<div class="relative h-80 overflow-hidden mb-6 border-b-4 border-transparent group-hover:border-primary transition-all">
-<div class="w-full h-full transition-transform duration-700 group-hover:scale-110" data-alt="A sharp, high-contrast photograph of a basketball player sweating during intense training in a dark, atmospheric gym. Neon blue lighting highlights the texture of the basketball and the athlete's focused expression. The style is gritty, professional, and performance-oriented." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCy6vLxRzmr_Z52Fu5Xvp41cDSyYlwBiFVMi6tPsnXLSEO7aDP5fMYbdwYAvtMWxgTVcgPeFASdYAeZs7k44iO3jtPw7JoqBANvBeTdStP3JC0GzF6196DE9s_uQ8gA9KAqz-ry1zrBQC27bGVRIgNOdk0Wa-NXyt5O_1QWdqpegnSTGzarb9v3AH0HAQQ6PZ-NB7C7enS7N19LzkMzUwfEPgx5Jt04rQdW1831WBOpywds4InnaeRMTw')"></div>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-caps text-label-caps">ANNOUNCEMENT</div>
-</div>
-<h3 class="font-title-md text-title-md group-hover:text-primary transition-colors mb-4">NEW TRAINING FACILITY UNVEILED IN CITY CENTER</h3>
-<p class="font-body-sm text-on-surface-variant line-clamp-2">Panteras Basketball announces the grand opening of a state-of-the-art facility designed for peak performance...</p>
-</div>
-<!-- News Item 2 -->
-<div class="group cursor-pointer">
-<div class="relative h-80 overflow-hidden mb-6 border-b-4 border-transparent group-hover:border-primary transition-all">
-<div class="w-full h-full transition-transform duration-700 group-hover:scale-110" data-alt="A vibrant wide-angle shot of a basketball game victory celebration. Players in black jerseys are jumping and cheering under electric blue stadium lights. Confetti falls through the high-contrast lighting, creating a scene of pure athletic triumph and energy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDexkdDD9RcZce9hcA3ccXi44TMIiRW6a65Xx7lrsEqV5O3INNblBykPyJRIqCBuRQL8gk2iPPZigAowm-rOTg-Qtb4-tkcZ-Kk021DbjXXkvd21nAzvY7RDPqvT_WND2FBxI6sZcORmbrmVXNIBlVm9xSagxpdhLvdFwj-Sk0CPlWnTPfUBE4d4JiGVWy__0pyaCxT_DayrvuzwqTqVFyzPZ_k_QUT2PkmhBxVGP8Cl2xX4t0jhOyllg')"></div>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-caps text-label-caps">MATCH RECAP</div>
-</div>
-<h3 class="font-title-md text-title-md group-hover:text-primary transition-colors mb-4">LAST MINUTE BUZZER BEATER SECURES PLAYOFF SPOT</h3>
-<p class="font-body-sm text-on-surface-variant line-clamp-2">A dramatic finish at the stadium as Marcus 'Shadow' Johnson clinches the win with a stunning three-pointer...</p>
-</div>
-<!-- News Item 3 -->
-<div class="group cursor-pointer">
-<div class="relative h-80 overflow-hidden mb-6 border-b-4 border-transparent group-hover:border-primary transition-all">
-<div class="w-full h-full transition-transform duration-700 group-hover:scale-110" data-alt="A clean, minimalist product shot of the new Panteras official team jersey. The black jersey features bold electric blue patterns on the side and a crisp white logo. The lighting is sophisticated, emphasizing the high-performance fabric texture against a dark, tonal background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC74Ych6w0I2U-fkDLL5Py0Hp494GyfQfb7OZlmXYVOQ0wLAnNhpYZmh6qSvOW7hP9AfNcr_2x_C3G2xj2PqD_ZT7w3w5CS0kGBoiHxbNQ6Q1jLRUlBLv3ozkq2fvRvMCCVl1lM5caZLV4nvbxOoSERPk26xbflwpf0S3N_zhYr8k5WFT4ES-GyuW89KpSFq18UiyymoH_vT4ASRKrPCTS82I19XxxqtAfGQfPURarTmNVSEXI64LfFiA')"></div>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-caps text-label-caps">STORE</div>
-</div>
-<h3 class="font-title-md text-title-md group-hover:text-primary transition-colors mb-4">SEASON KITS NOW AVAILABLE FOR PRE-ORDER</h3>
-<p class="font-body-sm text-on-surface-variant line-clamp-2">Own the look of the pros. The 2024/25 Panteras kits feature advanced breathability and the classic black/blue aesthetic...</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Player Feature CTA -->
-<section class="relative py-32 overflow-hidden bg-primary text-on-primary">
-<div class="absolute -right-20 -bottom-20 opacity-10">
-<span class="font-display-xl text-[400px] leading-none uppercase select-none">PANTERA</span>
-</div>
-<div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
-<div class="flex flex-col md:flex-row items-center gap-16">
-<div class="w-full md:w-1/2">
-<div class="relative group">
-<div class="absolute -inset-4 border-2 border-on-primary/30 translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></div>
-<div class="relative aspect-square bg-surface-container overflow-hidden">
-<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A heroic portrait of a top basketball player in a Panteras uniform, staring confidently into the camera. The player is lit from the side with sharp electric blue light, creating deep shadows and high-intensity highlights. He holds a textured black basketball under one arm. The overall vibe is intimidating and powerful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Iu-cStdwiLRUSz_4p2pIEDjpwrjh2GhG7U1cr_NF1nBxn60Macpoe3C0SPeEbM-ql-O7W_bcTrdsJEA_XhL-8M_bnPjsI5WZB9YIF8hPPRiKkv0l3A8bbNxEcSAUpbhxG-s1iH_Bzmx58MyMISV7uO2KjyG1L9iRNH0Ze8OmVO9rtKrzYftZfgxiRyP8NXwF2Kx5bz6ZKufwqMEtdYG7sQs-UIbjgBg8gH3e7pAgs4leaII2ZbtDlA"/>
-</div>
-</div>
-</div>
-<div class="w-full md:w-1/2">
-<span class="font-label-caps text-label-caps bg-on-primary text-primary px-3 py-1 inline-block mb-6">PLAYER SPOTLIGHT</span>
-<h2 class="font-headline-lg text-headline-lg uppercase mb-8 leading-tight">THE ENGINE BEHIND THE TEAM</h2>
-<p class="font-body-lg text-body-lg mb-10 text-on-primary/90">Marcus "The Shadow" Johnson has been the cornerstone of the Panteras defense for three seasons. Discover his journey from the city streets to the professional arena.</p>
-<button class="bg-on-primary text-primary font-label-caps text-label-caps px-12 py-5 text-xl font-bold transition-all hover:bg-surface hover:text-on-surface skew-card">
-<span class="skew-reverse inline-block">FULL BIOGRAPHY</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest border-t-4 border-primary mt-20">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter w-full max-w-container-max mx-auto">
-<div class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tighter">
-                PANTERAS
-            </div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Press Kit</a>
-</div>
-<div class="flex gap-6">
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="facebook">face_nod</span>
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="sports_basketball">sports_basketball</span>
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="alternate_email">alternate_email</span>
-</div>
-</div>
-<div class="px-margin-desktop py-6 border-t border-outline-variant/30 text-center">
-<p class="font-body-sm text-body-sm text-on-surface-variant opacity-60 uppercase tracking-widest">© 2024 PANTERAS BASKETBALL. ALL RIGHTS RESERVED.</p>
-</div>
-</footer>
-<script>
-        // Simple Countdown Logic
-        function updateCountdown() {
-            const mins = document.getElementById('mins');
-            const hours = document.getElementById('hours');
-
-            if(mins) {
-                let currentMins = parseInt(mins.innerText);
-                if(currentMins > 0) {
-                    mins.innerText = String(currentMins - 1).padStart(2, '0');
-                } else {
-                    mins.innerText = "59";
-                    let currentHours = parseInt(hours.innerText);
-                    hours.innerText = String(currentHours - 1).padStart(2, '0');
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>PANTERAS BASKETBALL | PORTAL OFICIAL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;700&family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b6c4ff",
+                        "on-primary": "#002780",
+                        "background": "#11131c",
+                        "surface": "#1d1f29",
+                        "on-surface": "#e1e1ef",
+                        "primary-container": "#0055ff",
+                        "outline-variant": "#434656"
+                    },
+                    fontFamily: {
+                        "display": ["Anton"],
+                        "body": ["Hanken Grotesk"],
+                        "label": ["Space Grotesk"]
+                    }
                 }
             }
         }
-        setInterval(updateCountdown, 60000);
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-surface-container-high');
-                header.classList.remove('bg-surface');
-            } else {
-                header.classList.add('bg-surface');
-                header.classList.remove('bg-surface-container-high');
-            }
-        });
     </script>
-</body></html>
+    <style>
+        .skew-card { transform: skewX(-4deg); }
+        .skew-reverse { transform: skewX(4deg); }
+        .page-section { display: none; }
+        .page-section.active { display: block; animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .hard-shadow { box-shadow: 4px 4px 0px #ffffff; }
+        .hard-shadow:hover { box-shadow: 0px 0px 0px #ffffff; transform: translate(2px, 2px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+
+<header class="bg-background/90 backdrop-blur-md border-b-2 border-outline-variant fixed top-0 w-full z-50">
+    <nav class="flex justify-between items-center w-full px-6 md:px-10 py-4 max-w-7xl mx-auto">
+        <div class="font-display text-3xl md:text-4xl uppercase tracking-tighter text-primary cursor-pointer" onclick="showSection('home')">
+            PANTERAS
+        </div>
+        <div class="hidden md:flex items-center gap-8 font-label text-xs uppercase tracking-widest">
+            <button onclick="showSection('home')" class="nav-link text-primary border-b-2 border-primary pb-1" id="link-home">Inicio</button>
+            <button onclick="showSection('shop')" class="nav-link text-on-surface-variant hover:text-white transition-colors" id="link-shop">Tienda</button>
+            <button onclick="showSection('team')" class="nav-link text-on-surface-variant hover:text-white transition-colors" id="link-team">Equipo</button>
+            <button onclick="showSection('lineup')" class="nav-link text-on-surface-variant hover:text-white transition-colors" id="link-lineup">Plantilla</button>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">shopping_cart</span>
+            <button class="bg-primary text-on-primary font-label text-[10px] px-6 py-2 uppercase hard-shadow font-bold transition-all">Tickets</button>
+        </div>
+    </nav>
+</header>
+
+<main class="pt-20">
+    <!-- SECCIÓN: INICIO -->
+    <section id="home" class="page-section active">
+        <div class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB38u4Jdhp0BtVoffovFj7fugDa1UTZ9GJcqL-NaOdxhSvb6qSOiVfEhMTx-LjKWGjQW4nExI66Mk6HmDNB_gQMoYfPkOYhCKhORm4Dy6jXEulNJoB_bGjEdhFs023LnW7ugWLePIK3i4W_132_Yfa_rNIEqcwYYoEVhtiWAxvLMcrcPtMhttvFuAnOSNwkCqKGaHwOAckjyOB6SQLC5QsuvCdWVFLxET03_LWFhiJE0P7n8ihT78V-Pg')"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+            <div class="relative z-10 px-10 max-w-7xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-12 h-[2px] bg-primary"></span>
+                    <span class="font-label text-xs text-primary uppercase tracking-[0.3em]">Season 2024/25</span>
+                </div>
+                <h1 class="font-display text-6xl md:text-8xl uppercase mb-8 leading-none">DOMINA LAS <br/> <span class="text-primary italic">SOMBRAS</span></h1>
+                <p class="max-w-xl text-gray-300 mb-10 text-lg leading-relaxed">El equipo más agresivo del circuito pro. Precisión táctica, velocidad explosiva y un legado forjado en la victoria.</p>
+                <div class="flex gap-4">
+                    <button onclick="showSection('lineup')" class="bg-primary text-on-primary font-label px-10 py-5 hard-shadow skew-card transition-all font-bold uppercase"><span class="skew-reverse inline-block">VER EL SQUAD</span></button>
+                    <button onclick="showSection('shop')" class="border-2 border-primary text-primary font-label px-10 py-5 hover:bg-primary/10 skew-card transition-all font-bold uppercase"><span class="skew-reverse inline-block">EQUIPACIÓN '24</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TIENDA -->
+    <section id="shop" class="page-section py-20 px-10 max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-16 border-l-4 border-primary pl-6">
+            <div>
+                <h2 class="font-display text-5xl uppercase italic">Tienda Oficial</h2>
+                <p class="font-label text-xs text-primary mt-2 uppercase tracking-widest">Performance Gear para Pros</p>
+            </div>
+            <div class="hidden md:flex gap-4">
+                <button class="bg-primary text-on-primary px-4 py-2 text-[10px] font-bold uppercase skew-card"><span class="skew-reverse inline-block">RECIÉN LLEGADO</span></button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Producto 1 -->
+            <div class="bg-surface p-6 border border-gray-800 hover:border-primary transition-all group relative">
+                <div class="absolute top-4 left-4 bg-primary text-on-primary text-[8px] font-bold px-2 py-1 uppercase z-10">Premium</div>
+                <div class="h-80 bg-background mb-6 overflow-hidden flex items-center justify-center">
+                    <img class="w-full h-full object-contain transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFdY8hqyGQ4kRwfx-qUTNh9bHoF1EknxXvBYttfcXogQg0NS5zONhkG3R7_elUYKtjfMG6oqAeMSBbxppmzBcyfBcV55ST0KVx6KckhpioKSDgqEhgwhBj3k9ToAuA8Z6trop9CWTRvLAoIhjJXyyvN8w5qP0nrQSxnYMUhbq3Q5c3jGSTLARCQjaocN7d40HUZgQFik79M7FfZhTafxv7fkHPl6GGc9yq8rzh4p1Rk_Txz8vUsqoD0g"/>
+                </div>
+                <h3 class="font-bold text-primary uppercase tracking-widest text-sm">Jersey Panteras Home '24</h3>
+                <p class="text-3xl font-display mt-2">$120.00</p>
+                <button class="mt-6 w-full bg-primary-container text-white py-4 font-label text-xs hover:bg-primary transition-colors uppercase font-bold tracking-widest">AÑADIR AL CARRITO</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="bg-surface p-6 border border-gray-800 hover:border-primary transition-all group relative">
+                <div class="h-80 bg-background mb-6 overflow-hidden flex items-center justify-center">
+                    <img class="w-full h-full object-contain transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtpEeyzlUL4jvHmh8hC5h8YNpcKw6ZYv5QEM4vmLxBX6ucgKCnvy9tu595e6zYLMYzkiMHqPHSlqtWCBPQ75Y5heJe0TaKq8frXNSQIdBW4ahQXqijYhfNY_Utif6mBsXrOh7fwJ_0ns6z4QUTULaSeogq2XjAWQnMegkmSXSD6bgagHM7aJjm246NI5LXUCxCdnrJXOTOWGk79-n8BBV-RL6Gg2LsDcSDtf0SRK1xQC--P51wuRbeXQ"/>
+                </div>
+                <h3 class="font-bold text-primary uppercase tracking-widest text-sm">Hoodie Core Stealth</h3>
+                <p class="text-3xl font-display mt-2">$85.00</p>
+                <button class="mt-6 w-full bg-primary-container text-white py-4 font-label text-xs hover:bg-primary transition-colors uppercase font-bold tracking-widest">AÑADIR AL CARRITO</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="bg-surface p-6 border border-gray-800 hover:border-primary transition-all group relative">
+                <div class="h-80 bg-background mb-6 overflow-hidden flex items-center justify-center">
+                    <img class="w-full h-full object-contain transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAS6g-UKOn0c2DsD1aeffUjfQWOeQZuojLq30aKxK9Gn-JH2mn6sdOvZzj7Udzsnhzy7P42j398tZXoYwsN_P5uO4tAbm9yDrmcUuO_gGox8k3jqkBzxvoRK9HZoqMO7TNYyviBdZFHdyVBVLuLp3LF_GFOHau2diCd-R2aPY9cgYikWxLsYshbxZcj-DgIBhAx7lwutzbjFBZi4ZzI1boPLLXnYKbR02xCrghE5BmQ6Vl81UbmU8I9g"/>
+                </div>
+                <h3 class="font-bold text-primary uppercase tracking-widest text-sm">Balón Oficial Competición</h3>
+                <p class="text-3xl font-display mt-2">$60.00</p>
+                <button class="mt-6 w-full bg-primary-container text-white py-4 font-label text-xs hover:bg-primary transition-colors uppercase font-bold tracking-widest">AÑADIR AL CARRITO</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: EQUIPO -->
+    <section id="team" class="page-section">
+        <div class="h-[500px] flex items-center justify-center bg-fixed bg-cover relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAw6fVmPGsUgTco-DqISXer78G92__ktQkSVeNP_my933-RR_8000IuZffiGXdErwcK975nxRkjIHuRPzxdJVepzPLPB8tRYPHSSSRFZ42I0ABqfKEBB2nt_RLcQUvyzkVYU0WQ7nRDqJZh8tqozvYnx4VDYLhf-I9qKzl6NFbEwqhygCvdaEIv6pnra4L6XN-ZCUd2bg8NHH20_yQfD9UUxnrVwpsBqcAr4AR9PXFApymHq0voRo1_tg')">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <h2 class="relative font-display text-6xl md:text-9xl uppercase italic text-primary drop-shadow-2xl">EL LEGADO</h2>
+        </div>
+        <div class="py-24 px-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div>
+                <span class="font-label text-xs text-primary uppercase tracking-widest mb-4 block">Desde 1988</span>
+                <h3 class="font-display text-5xl mb-8 uppercase italic leading-none">Cultura de <br/> Alto Rendimiento</h3>
+                <p class="text-gray-400 leading-relaxed mb-10 text-lg">Nacidos en el asfalto, evolucionamos hasta la élite digital. Panteras Basketball combina el instinto callejero con la analítica de datos más avanzada del mundo para dominar cada segundo del reloj.</p>
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-8">
+                    <div class="border-l-4 border-primary pl-4"><p class="text-4xl font-display">12</p><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">Ligas</p></div>
+                    <div class="border-l-4 border-primary pl-4"><p class="text-4xl font-display">28</p><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">All-Stars</p></div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-4 border-2 border-primary/20 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></div>
+                <img class="relative border-4 border-surface w-full grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd1LzcwNHEgq6msjOy1vvQMeA886nLu-3Dau6EiGJ0hDh3ZKk6PD1k56MtFZe4OOeFrqEcX87kawTppSDexKO8alw2unBF3-iZN2Dtwo9i3Bouh-xaQ_fXSpJQ2xfBSCnPl-PvjT-5FEMrjWc0vXhRmbHqbc6tEgAcMNuqxun0kclsN4HsXSghlEjNg3wURMg2eIv9wQ5JxI5nUVmiOfRfO9aQKQ5JBLZtM80LSCPPqRR0XKYCbR673w" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PLANTILLA -->
+    <section id="lineup" class="page-section py-24 px-10 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-8">
+            <div>
+                <h2 class="font-display text-6xl md:text-8xl uppercase italic text-primary leading-none">The Squad</h2>
+                <p class="font-label text-xs text-gray-500 mt-4 uppercase tracking-[0.4em]">Roster Activo Season 24/25</p>
+            </div>
+            <div class="flex gap-4">
+                <div class="bg-surface border border-outline-variant/30 px-6 py-4 skew-card">
+                    <div class="skew-reverse text-center">
+                        <p class="text-[10px] text-gray-500 uppercase font-bold mb-1">Win Rate</p>
+                        <p class="text-3xl font-display">92%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Jugador 1 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">05</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABn0q_j5MVDBdehBeMMGeBTUUCpxYnT9IX2t2twWim0Oz_jozAOPCGvF_ADeAO-JcfmxZv7tDua3v-vcdkhxEqU-v5oc9NBIc1_V_24R_EnFHarG35EWWcBM9Gmv4iS_QUZ7DZIuuxNki1PDC2gbKVGqXbFwN-DhS1uiOr6B9IV2ryg3eHMzTqlsMYnDOQ11IGVOiiegC4P_MNospGWdsRZGpgB3LG-j1pXew_QRZ8dgfFZd1KZufyUg"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Capitán / Alero</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">Marcus Thorne</h3>
+                <div class="mt-6 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div class="text-[10px] font-bold bg-white/10 px-2 py-1 uppercase">PPG: 28.4</div>
+                    <div class="text-[10px] font-bold bg-white/10 px-2 py-1 uppercase">RPG: 11.2</div>
+                </div>
+            </div>
+            <!-- Jugador 2 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">21</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnZIGtnqAc9IBtHxv__OIen5gaiov-6kDblh2WeUFM79UbKgFQ0ba74swG3VT_dZKZkmfnPcyYg-LCkKsB1Wz65CGFkxZjRwsEBgCgO7ycQgh1K1PF3m3aLkBZXpBX_61Ra6RaG9Wzh_w8GYwvdpsWBlHLiV8yBSyj867_cwImJaroouVXZnJUcak0TgRXi9XJhYsgjsI78Zvn6H-7bE51OxiEVCH7r3mEjyDq0VwcObNnh122twEvAA"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Base</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">Elena Rodriguez</h3>
+            </div>
+            <!-- Jugador 3 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">44</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTadvz2ID5LgwKp-ABY9uLlDf_j3FYZqS9KhjAtlLbtVoUilCYlgeXMqt8rKne320sLSFJ4Ie1KaZzoFNNftvLixm3-xB2vdTnclq89EWy-m6A9MtYKAN99G2PuKuvzZzrrLtTAesRF_tZyuaISguzfnCCaWGQGCe6wmmSmaH6RbJbVjmbfDvRug1D90q5xE1bHagt9wB_11ZZBAsLBHoHz5RmkDuCPNncjoyfyMnyhAvZ5z7PGAOY6w"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Pívot</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">David Chen</h3>
+            </div>
+            <!-- Jugador 4 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">08</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwtEuZP_mimc3eI0GyENUTEnvu2HDbNClALnJ5nz3IvgaUjAV1_oWMExYaHnwSisuXvJEt4xkdkTR2l5vq-o9m8vuItwR3szMeDaYfilTpLaXz4TNUWIrlRS1HhKCidSUybb4wjZQLoet5a2so9FEDJKLAqxJ47kZbfuFuIAcOH5xNPAIZzOS7emhAk6Bo60k24bUvpC1Lb0OFRId3QP4wiPuThnelghH_-setQCzejUAJuv1SvKgY2Q"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Escolta</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">Jaxon Rivera</h3>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-black py-16 mt-20 border-t-4 border-primary">
+    <div class="px-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+        <div class="flex flex-col gap-4">
+            <div class="font-display text-4xl uppercase text-primary">PANTERAS</div>
+            <p class="max-w-xs text-gray-500 font-body text-sm">Portal oficial de Panteras Basketball. La vanguardia del deporte pro.</p>
+        </div>
+        <div class="flex flex-col gap-4 items-center md:items-end">
+            <div class="flex gap-6">
+                <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">facebook</span>
+                <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">sports_basketball</span>
+                <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">alternate_email</span>
+            </div>
+            <p class="font-label text-[10px] uppercase tracking-[0.2em] text-gray-600">© 2024 PANTERAS BASKETBALL. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Ocultar todas las secciones
+        document.querySelectorAll('.page-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        // Mostrar la seleccionada
+        document.getElementById(sectionId).classList.add('active');
+
+        // Actualizar links de navegación visualmente
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('text-primary', 'border-b-2', 'border-primary');
+            link.classList.add('text-on-surface-variant');
+        });
+        const activeLink = document.getElementById('link-' + sectionId);
+        if (activeLink) {
+            activeLink.classList.remove('text-on-surface-variant');
+            activeLink.classList.add('text-primary', 'border-b-2', 'border-primary');
+        }
+
+        // Hacer scroll al inicio suavemente
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
