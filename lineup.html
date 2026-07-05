@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@300;400;700&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#e3e6ff",
+                    "on-secondary-fixed-variant": "#474646",
+                    "tertiary": "#c6c6c7",
+                    "on-primary-fixed-variant": "#0039b3",
+                    "inverse-on-surface": "#2e303a",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-highest": "#32343f",
+                    "surface-bright": "#373943",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "outline": "#8d90a2",
+                    "outline-variant": "#434656",
+                    "secondary-container": "#4a4949",
+                    "inverse-surface": "#e1e1ef",
+                    "surface": "#11131c",
+                    "tertiary-fixed": "#e2e2e2",
+                    "secondary-fixed": "#e5e2e1",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "background": "#11131c",
+                    "error-container": "#93000a",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "surface-container-low": "#191b25",
+                    "on-surface": "#e1e1ef",
+                    "surface-container-lowest": "#0c0e17",
+                    "surface-dim": "#11131c",
+                    "secondary": "#c9c6c5",
+                    "on-secondary-container": "#bab8b7",
+                    "surface-container-high": "#282933",
+                    "tertiary-container": "#666868",
+                    "on-primary-fixed": "#001551",
+                    "on-primary": "#002780",
+                    "on-surface-variant": "#c3c5d9",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "primary": "#b6c4ff",
+                    "surface-tint": "#b6c4ff",
+                    "on-tertiary": "#2f3131",
+                    "inverse-primary": "#004dea",
+                    "surface-container": "#1d1f29",
+                    "surface-variant": "#32343f",
+                    "primary-fixed": "#dce1ff",
+                    "primary-container": "#0055ff",
+                    "on-tertiary-container": "#e7e7e7",
+                    "on-background": "#e1e1ef",
+                    "on-secondary": "#313030",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-fixed": "#1a1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-lg": ["Anton"],
+                    "headline-lg-mobile": ["Anton"],
+                    "title-md": ["Hanken Grotesk"],
+                    "display-xl": ["Anton"],
+                    "body-sm": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "display-xl": ["96px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .player-card {
+            clip-path: polygon(0 0, 100% 0, 100% 92%, 88% 100%, 0 100%);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .player-card:hover {
+            transform: translateY(-8px) skewX(-2deg);
+        }
+        .energy-cut {
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        .electric-glow:hover {
+            box-shadow: 0 0 20px rgba(182, 196, 255, 0.4);
+        }
+        .skew-box {
+            transform: skewX(-12deg);
+        }
+        .skew-fix {
+            transform: skewX(12deg);
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        .live-pulse {
+            animation: pulse-glow 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface border-b-2 border-outline-variant flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto sticky top-0 z-50">
+<div class="font-headline-lg text-headline-lg uppercase tracking-tighter text-primary dark:text-primary">
+            PANTERAS
+        </div>
+<div class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="shop.html">Shop</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="team.html">Team</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="lineup.html">Lineup</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-2 skew-box hover:bg-on-primary-container hover:text-primary transition-all duration-200">
+<span class="inline-block skew-fix">Tickets</span>
+</button>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Lineup Section -->
+<section class="relative pt-20 pb-12 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary opacity-5 blur-[120px] rounded-full"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-gutter border-l-4 border-primary pl-8 mb-16">
+<div>
+<h2 class="font-label-caps text-label-caps text-primary mb-2 uppercase tracking-[0.2em]">Season 2024/25</h2>
+<h1 class="font-display-xl text-display-xl uppercase leading-none">The <span class="text-primary italic">Lineup</span></h1>
+</div>
+<div class="flex gap-4 mb-4">
+<button class="bg-surface-container-highest border border-outline-variant px-4 py-2 font-label-caps text-label-caps skew-box hover:border-primary transition-colors">
+<span class="inline-block skew-fix">Starters</span>
+</button>
+<button class="bg-surface-container-highest border border-outline-variant px-4 py-2 font-label-caps text-label-caps skew-box hover:border-primary transition-colors">
+<span class="inline-block skew-fix">Reserves</span>
+</button>
+</div>
+</div>
+<!-- Player Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Player Card 1: Star Player -->
+<div class="player-card group relative bg-surface-container-low aspect-[3/4] overflow-hidden border border-outline-variant/30 md:col-span-2 md:row-span-2">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, high-action portrait of a tall basketball player in a black and electric blue Panteras jersey. The player is captured mid-air, holding a basketball, against a dark, moody stadium background with sharp electric blue light streaks cutting through the shadows. The lighting is dramatic, high-contrast, emphasizing the athletic definition and the professional sports aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABn0q_j5MVDBdehBeMMGeBTUUCpxYnT9IX2t2twWim0Oz_jozAOPCGvF_ADeAO-JcfmxZv7tDua3v-vcdkhxEqU-v5oc9NBIc1_V_24R_EnFHarG35EWWcBM9Gmv4iS_QUZ7DZIuuxNki1PDC2gbKVGqXbFwN-DhS1uiOr6B9IV2ryg3eHMzTqlsMYnDOQ11IGVOiiegC4P_MNospGWdsRZGpgB3LG-j1pXew_QRZ8dgfFZd1KZufyUg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90"></div>
+<div class="absolute top-6 left-6 skew-box bg-primary px-3 py-1">
+<span class="font-headline-lg text-headline-lg text-on-primary skew-fix leading-none">05</span>
+</div>
+<div class="absolute bottom-8 left-8 right-8 z-20">
+<p class="font-label-caps text-label-caps text-primary mb-1">FORWARD / CAPTAIN</p>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-4">Marcus "The Void" Thorne</h3>
+<div class="flex gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+<div class="bg-surface-container-highest/80 backdrop-blur-sm border border-outline-variant p-3 skew-box">
+<div class="skew-fix text-center">
+<p class="text-[10px] text-on-surface-variant font-label-caps">PPG</p>
+<p class="font-title-md text-title-md">28.4</p>
+</div>
+</div>
+<div class="bg-surface-container-highest/80 backdrop-blur-sm border border-outline-variant p-3 skew-box">
+<div class="skew-fix text-center">
+<p class="text-[10px] text-on-surface-variant font-label-caps">RPG</p>
+<p class="font-title-md text-title-md">11.2</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Player Card 2 -->
+<div class="player-card group relative bg-surface-container-low aspect-[3/4] overflow-hidden border border-outline-variant/30">
+<div class="absolute inset-0 z-0 bg-cover bg-top grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A focused studio portrait of a basketball point guard with a determined expression, wearing the Panteras uniform. The background is a charcoal grey with subtle geometric line patterns in electric blue. Sharp lighting highlights the textures of the jersey and the sweat on the athlete's skin, maintaining a high-intensity, professional sports circuit look." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnZIGtnqAc9IBtHxv__OIen5gaiov-6kDblh2WeUFM79UbKgFQ0ba74swG3VT_dZKZkmfnPcyYg-LCkKsB1Wz65CGFkxZjRwsEBgCgO7ycQgh1K1PF3m3aLkBZXpBX_61Ra6RaG9Wzh_w8GYwvdpsWBlHLiV8yBSyj867_cwImJaroouVXZnJUcak0TgRXi9XJhYsgjsI78Zvn6H-7bE51OxiEVCH7r3mEjyDq0VwcObNnh122twEvAA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute top-4 left-4 skew-box bg-surface-container-highest border border-outline-variant px-2 py-1">
+<span class="font-title-md text-title-md text-on-surface skew-fix">21</span>
+</div>
+<div class="absolute bottom-6 left-6 z-20">
+<p class="font-label-caps text-label-caps text-on-surface-variant">POINT GUARD</p>
+<h4 class="font-title-md text-title-md uppercase text-on-surface">Elena Rodriguez</h4>
+</div>
+</div>
+<!-- Player Card 3 -->
+<div class="player-card group relative bg-surface-container-low aspect-[3/4] overflow-hidden border border-outline-variant/30">
+<div class="absolute inset-0 z-0 bg-cover bg-top grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional athlete profile photo of a center basketball player, showcasing immense physical presence. The player is standing with arms crossed in the Panteras team gear. The lighting is aggressive stadium-style, creating deep blacks and bright white highlights, with electric blue rim lighting against a pitch-black background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTadvz2ID5LgwKp-ABY9uLlDf_j3FYZqS9KhjAtlLbtVoUilCYlgeXMqt8rKne320sLSFJ4Ie1KaZzoFNNftvLixm3-xB2vdTnclq89EWy-m6A9MtYKAN99G2PuKuvzZzrrLtTAesRF_tZyuaISguzfnCCaWGQGCe6wmmSmaH6RbJbVjmbfDvRug1D90q5xE1bHagt9wB_11ZZBAsLBHoHz5RmkDuCPNncjoyfyMnyhAvZ5z7PGAOY6w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute top-4 left-4 skew-box bg-surface-container-highest border border-outline-variant px-2 py-1">
+<span class="font-title-md text-title-md text-on-surface skew-fix">44</span>
+</div>
+<div class="absolute bottom-6 left-6 z-20">
+<p class="font-label-caps text-label-caps text-on-surface-variant">CENTER</p>
+<h4 class="font-title-md text-title-md uppercase text-on-surface">David "The Wall" Chen</h4>
+</div>
+</div>
+<!-- Player Card 4 -->
+<div class="player-card group relative bg-surface-container-low aspect-[3/4] overflow-hidden border border-outline-variant/30">
+<div class="absolute inset-0 z-0 bg-cover bg-top grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Dynamic shot of a shooting guard mid-dribble, captured in a high-contrast style. The athlete wears the Panteras basketball kit. The scene is lit with cool blue stadium lights, creating long shadows and a sense of speed. High-end digital precision aesthetic with sharp focus on the player's intense facial expression." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwtEuZP_mimc3eI0GyENUTEnvu2HDbNClALnJ5nz3IvgaUjAV1_oWMExYaHnwSisuXvJEt4xkdkTR2l5vq-o9m8vuItwR3szMeDaYfilTpLaXz4TNUWIrlRS1HhKCidSUybb4wjZQLoet5a2so9FEDJKLAqxJ47kZbfuFuIAcOH5xNPAIZzOS7emhAk6Bo60k24bUvpC1Lb0OFRId3QP4wiPuThnelghH_-setQCzejUAJuv1SvKgY2Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute top-4 left-4 skew-box bg-surface-container-highest border border-outline-variant px-2 py-1">
+<span class="font-title-md text-title-md text-on-surface skew-fix">08</span>
+</div>
+<div class="absolute bottom-6 left-6 z-20">
+<p class="font-label-caps text-label-caps text-on-surface-variant">SHOOTING GUARD</p>
+<h4 class="font-title-md text-title-md uppercase text-on-surface">Jaxon Rivera</h4>
+</div>
+</div>
+<!-- Player Card 5 -->
+<div class="player-card group relative bg-surface-container-low aspect-[3/4] overflow-hidden border border-outline-variant/30">
+<div class="absolute inset-0 z-0 bg-cover bg-top grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A portrait of a female professional basketball player for Panteras, holding a ball under her arm. The lighting uses electric blue neon accents to highlight the player's silhouette against a dark charcoal background. The mood is intimidating and sleek, consistent with a high-performance sports brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCU27HFFUqc5246YZg-Kp47-u2tRxjBXmdncc28b9QQsH13rv_l6ucZlCBAEWICf0IKWsPPrEfMyJmTQ763HK2PoIH8hgL9KhZKmzmvxDcwKRw8222B71cw9r6t_tTxxCCnMSaGW-WExffhDOn6pwCVMGvHE2FMYaKX-AavZ-k9TAWJzdvXlTH1_sEEInoQW9QTFCoBgxPEsdt59XlfDcVccM9Lsvu-p8Jv4D0hs1yuM-TfARiZnnYO-w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute top-4 left-4 skew-box bg-surface-container-highest border border-outline-variant px-2 py-1">
+<span class="font-title-md text-title-md text-on-surface skew-fix">12</span>
+</div>
+<div class="absolute bottom-6 left-6 z-20">
+<p class="font-label-caps text-label-caps text-on-surface-variant">SMALL FORWARD</p>
+<h4 class="font-title-md text-title-md uppercase text-on-surface">Sarah "Swift" Miller</h4>
+</div>
+</div>
+<!-- Interactive Stats Component -->
+<div class="md:col-span-2 bg-surface-container-high border border-outline-variant/30 relative overflow-hidden flex flex-col justify-center p-12">
+<div class="absolute top-0 right-0 p-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-primary rounded-full live-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Current Leaderboard</span>
+</div>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-lg text-headline-lg uppercase mb-8">Team Efficiency Rating</h3>
+<div class="space-y-6">
+<div class="relative">
+<div class="flex justify-between font-label-caps text-label-caps mb-2">
+<span>Offensive Speed</span>
+<span class="text-primary">94%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest">
+<div class="h-full bg-primary" style="width: 94%"></div>
+</div>
+</div>
+<div class="relative">
+<div class="flex justify-between font-label-caps text-label-caps mb-2">
+<span>Defensive Lock</span>
+<span class="text-primary">88%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest">
+<div class="h-full bg-primary" style="width: 88%"></div>
+</div>
+</div>
+<div class="relative">
+<div class="flex justify-between font-label-caps text-label-caps mb-2">
+<span>Transition Flux</span>
+<span class="text-primary">91%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest">
+<div class="h-full bg-primary" style="width: 91%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative background graphic -->
+<div class="absolute -bottom-10 -right-10 opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-icon="query_stats">query_stats</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Rosters Section -->
+<section class="bg-surface-container-lowest py-24 border-t-4 border-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-12 flex justify-between items-center">
+<h2 class="font-headline-lg text-headline-lg uppercase italic">League Standings</h2>
+<span class="font-label-caps text-label-caps border border-primary px-4 py-1 text-primary">LIVE UPDATES</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant">
+<th class="py-4 px-6">Rank</th>
+<th class="py-4 px-6">Team Entity</th>
+<th class="py-4 px-6 text-center">W - L</th>
+<th class="py-4 px-6 text-center">Streak</th>
+<th class="py-4 px-6 text-right">Form</th>
+</tr>
+</thead>
+<tbody class="font-title-md text-title-md uppercase">
+<tr class="bg-surface hover:bg-primary/5 transition-colors border-b border-outline-variant/10">
+<td class="py-6 px-6 font-headline-lg text-primary">01</td>
+<td class="py-6 px-6">Panteras Basketball</td>
+<td class="py-6 px-6 text-center">24 - 4</td>
+<td class="py-6 px-6 text-center text-primary">W6</td>
+<td class="py-6 px-6 text-right">
+<div class="flex justify-end gap-1">
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-surface-container-highest"></div>
+</div>
+</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-primary/5 transition-colors border-b border-outline-variant/10">
+<td class="py-6 px-6 font-headline-lg opacity-50">02</td>
+<td class="py-6 px-6">Viper Squad</td>
+<td class="py-6 px-6 text-center">22 - 6</td>
+<td class="py-6 px-6 text-center">L1</td>
+<td class="py-6 px-6 text-right">
+<div class="flex justify-end gap-1">
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-surface-container-highest"></div>
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-primary"></div>
+</div>
+</td>
+</tr>
+<tr class="bg-surface hover:bg-primary/5 transition-colors border-b border-outline-variant/10">
+<td class="py-6 px-6 font-headline-lg opacity-50">03</td>
+<td class="py-6 px-6">Titan United</td>
+<td class="py-6 px-6 text-center">19 - 9</td>
+<td class="py-6 px-6 text-center text-primary">W2</td>
+<td class="py-6 px-6 text-right">
+<div class="flex justify-end gap-1">
+<div class="w-2 h-8 bg-surface-container-highest"></div>
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-primary"></div>
+<div class="w-2 h-8 bg-surface-container-highest"></div>
+<div class="w-2 h-8 bg-primary"></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t-4 border-primary w-full mt-24">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter w-full max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tighter">
+                PANTERAS
+            </div>
+<div class="flex flex-wrap justify-center gap-8 font-body-sm text-body-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Press Kit</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant opacity-60">
+                © 2024 PANTERAS BASKETBALL. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for table rows
+        document.querySelectorAll('tbody tr').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.transform = 'scale(1.01) translateX(10px)';
+            });
+            row.addEventListener('mouseleave', () => {
+                row.style.transform = 'scale(1) translateX(0)';
+            });
+        });
+
+        // Dynamic player card entrance animation
+        window.addEventListener('load', () => {
+            const cards = document.querySelectorAll('.player-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body></html>
