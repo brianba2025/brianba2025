@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Team | PANTERAS BASKETBALL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shear-btn {
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+        }
+        .energy-layer {
+            position: relative;
+            overflow: hidden;
+        }
+        .energy-layer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(182, 196, 255, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .stat-card {
+            border-left: 4px solid #b6c4ff;
+            background: linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(17, 19, 28, 1) 100%);
+        }
+        .glass-accent {
+            background: rgba(182, 196, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(182, 196, 255, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#e3e6ff",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary": "#c6c6c7",
+                        "on-primary-fixed-variant": "#0039b3",
+                        "inverse-on-surface": "#2e303a",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#32343f",
+                        "surface-bright": "#373943",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "outline": "#8d90a2",
+                        "outline-variant": "#434656",
+                        "secondary-container": "#4a4949",
+                        "inverse-surface": "#e1e1ef",
+                        "surface": "#11131c",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "background": "#11131c",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "surface-container-low": "#191b25",
+                        "on-surface": "#e1e1ef",
+                        "surface-container-lowest": "#0c0e17",
+                        "surface-dim": "#11131c",
+                        "secondary": "#c9c6c5",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-container-high": "#282933",
+                        "tertiary-container": "#666868",
+                        "on-primary-fixed": "#001551",
+                        "on-primary": "#002780",
+                        "on-surface-variant": "#c3c5d9",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "primary": "#b6c4ff",
+                        "surface-tint": "#b6c4ff",
+                        "on-tertiary": "#2f3131",
+                        "inverse-primary": "#004dea",
+                        "surface-container": "#1d1f29",
+                        "surface-variant": "#32343f",
+                        "primary-fixed": "#dce1ff",
+                        "primary-container": "#0055ff",
+                        "on-tertiary-container": "#e7e7e7",
+                        "on-background": "#e1e1ef",
+                        "on-secondary": "#313030",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "title-md": ["Hanken Grotesk"],
+                        "display-xl": ["Anton"],
+                        "body-sm": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "display-xl": ["96px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-lg overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface border-b-2 border-outline-variant fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg uppercase tracking-tighter text-primary">PANTERAS</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="shop.html">Shop</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="team.html">Team</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="lineup.html">Lineup</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">shopping_cart</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">person</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-2 uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-200 active:skew-x-12">
+                    Tickets
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-60" data-alt="A cinematic, high-contrast wide shot of a professional basketball arena, illuminated by dramatic blue spotlights cutting through a smoky atmosphere. The dark charcoal stadium seating fades into deep shadows, while the polished court reflects the electric blue lighting. The Panteras team emblem is projected onto the center court in a crisp, glowing white light, creating an intimidating and premium pro-circuit atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAw6fVmPGsUgTco-DqISXer78G92__ktQkSVeNP_my933-RR_8000IuZffiGXdErwcK975nxRkjIHuRPzxdJVepzPLPB8tRYPHSSSRFZ42I0ABqfKEBB2nt_RLcQUvyzkVYU0WQ7nRDqJZh8tqozvYnx4VDYLhf-I9qKzl6NFbEwqhygCvdaEIv6pnra4L6XN-ZCUd2bg8NHH20_yQfD9UUxnrVwpsBqcAr4AR9PXFApymHq0voRo1_tg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full pb-16">
+<h1 class="font-display-xl text-display-xl uppercase italic -skew-x-6 text-primary mb-4">The Organization</h1>
+<p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">Built on grit, precision, and an unwavering pursuit of excellence. Panteras Basketball is more than a team; it's a legacy of high-performance culture.</p>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="px-margin-desktop py-20 max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="stat-card p-6">
+<div class="font-headline-lg text-headline-lg text-primary">12</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Championships</div>
+</div>
+<div class="stat-card p-6">
+<div class="font-headline-lg text-headline-lg text-primary">28</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">All-Star Players</div>
+</div>
+<div class="stat-card p-6">
+<div class="font-headline-lg text-headline-lg text-primary">1988</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Founded</div>
+</div>
+<div class="stat-card p-6">
+<div class="font-headline-lg text-headline-lg text-primary">92%</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Win Percentage</div>
+</div>
+</section>
+<!-- Coaching Staff - Bento Grid -->
+<section class="px-margin-desktop py-20 bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-2">Technical Board</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary hidden md:block">Architects of Victory</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+<!-- Head Coach -->
+<div class="md:col-span-6 group relative overflow-hidden bg-surface-container-highest border border-outline-variant/30 transition-all hover:border-primary">
+<div class="absolute inset-0 bg-cover bg-top grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional studio portrait of a head basketball coach with a focused, intense expression. He is wearing a sleek charcoal suit with a subtle electric blue tie. The background is a minimalist dark grey with hard-edged lighting that creates sharp highlights on his features, mirroring the Panteras' aggressive and precise brand aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAd1LzcwNHEgq6msjOy1vvQMeA886nLu-3Dau6EiGJ0hDh3ZKk6PD1k56MtFZe4OOeFrqEcX87kawTppSDexKO8alw2unBF3-iZN2Dtwo9i3Bouh-xaQ_fXSpJQ2xfBSCnPl-PvjT-5FEMrjWc0vXhRmbHqbc6tEgAcMNuqxun0kclsN4HsXSghlEjNg3wURMg2eIv9wQ5JxI5nUVmiOfRfO9aQKQ5JBLZtM80LSCPPqRR0XKYCbR673w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 mb-3 inline-block">Head Coach</span>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-1">Marcus Thorne</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5x League Champion | Strategic Mastermind</p>
+</div>
+</div>
+<!-- Assistant 1 -->
+<div class="md:col-span-3 group relative overflow-hidden bg-surface-container-highest border border-outline-variant/30 transition-all hover:border-primary">
+<div class="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="A portrait of a male assistant basketball coach in his 40s, wearing a premium Panteras branded athletic polo shirt. He has a determined look, captured in a high-contrast environment with cool blue lighting accents. The style is sharp and digital, focusing on professional precision and high-intensity performance culture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxkvEwk32nLOgGiOCym4eIwSQ-y2kNOc3SVk-tBTnAmay8L1zAS0Evu3IyLF3EJtSS5zjSUFVLakd2fuCEE89hkOZQdkyK07qU2JFqb_UXYY5gNYy2_aOQ8rW1QgMU30L5SR4FADfqIB0W2Q5nhXkyJ7facUqbGZTs-lvniSEssTAuAJDh4kEc-MIXUX_kAYxjkodmtlg3ztP3ifK7I1TDdkjnVf6N-xiAOlEuTAT3clIe1Rv85rfdVw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<span class="text-primary font-label-caps text-label-caps block mb-1">Lead Asst.</span>
+<h4 class="font-title-md text-title-md uppercase">Sarah Jenkins</h4>
+</div>
+</div>
+<!-- Assistant 2 -->
+<div class="md:col-span-3 flex flex-col gap-gutter">
+<div class="flex-1 group relative overflow-hidden bg-surface-container-highest border border-outline-variant/30 transition-all hover:border-primary">
+<div class="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="A portrait of a athletic performance coach holding a tactical clipboard, wearing a dark navy training kit. High-key lighting emphasizes his athletic build and focused demeanor. The background is dark charcoal with a thin glowing electric blue line across the frame, consistent with the team's visual depth and energy layering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-ipRi9YUkIEKw-LhoDiebEwNRguT84EwgW9mvfK8CzufkjK3_uQXYMlHjQovjc6DMyqrfkBuenop0HiDYkMhOdy1cy_NeMXBqsQwU4Q7FevIAo6cqzNUMqDFE967Y0moK12hD7zfdDU3eeat7LT79PbF9xtruw4YGGZSiearPBrkymHwemfUQFUApDEi0-xAStOiDms4MBGD5Y0u2SZRZ7z9_EhyauDbdQ1BalzoS6EjgwvBVeQQbFQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<span class="text-primary font-label-caps text-label-caps block mb-1">Physio</span>
+<h4 class="font-title-md text-title-md uppercase">David Chen</h4>
+</div>
+</div>
+<div class="flex-1 group relative overflow-hidden bg-surface-container-highest border border-outline-variant/30 transition-all hover:border-primary">
+<div class="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="A young female analyst with a headset and a high-tech tablet, looking intensely at the screen. The scene is shot in a dark, high-tech control room with blue monitor reflections on her face. This image represents the data-driven, precise future of the Panteras organization, using a sophisticated monochromatic palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKWwl420ALgC8nAyRVqe0JTxcs11qmN2HQJQ055bh0oMfJDuSd5_STNpA1LkkWS7SXtUy27udvWXpHP75VxEprM8bQ68eIgGsoe42uiDEXdJ6wDo2xDcC1bb66jHOofcH7u4WYdQJvZtCFoHv_vVZuVVybiffZNG01LCOJuH95Jm0VOaBSj3Sj9IyppKYSG2NdwMjnUqvwuWR-I1oujn8dLkuo8fTunPXVIGdmdeyfAIzDe6jPhBMQ0w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<span class="text-primary font-label-caps text-label-caps block mb-1">Analyst</span>
+<h4 class="font-title-md text-title-md uppercase">Elena Rossi</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="px-margin-desktop py-24 max-w-container-max mx-auto overflow-hidden">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg uppercase italic -skew-x-6">The Legacy</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Four Decades of Dominance</p>
+</div>
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-outline-variant md:-translate-x-1/2"></div>
+<!-- Timeline Item 1 -->
+<div class="relative mb-20 flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+<div class="font-headline-lg text-headline-lg text-primary opacity-50 mb-2">1988</div>
+<h4 class="font-title-md text-title-md uppercase mb-3">The Genesis</h4>
+<p class="text-on-surface-variant font-body-sm">Founded in the heart of the city with a vision to redefine urban basketball. The inaugural season ended with a surprise play-off run that shook the league.</p>
+</div>
+<div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-primary"></div>
+<div class="md:w-1/2 md:pl-12">
+<div class="w-full h-48 bg-cover bg-center grayscale border border-outline-variant" data-alt="A vintage-style, high-contrast black and white photograph of a group of basketball players in 1980s style jerseys, celebrating on a gritty outdoor urban court. The lighting is harsh and dramatic, emphasizing the 'grit and precision' origin story of the Panteras. The image is framed with a subtle electric blue glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkat98cmfI2FWRWFENKZM2n3S-sCRnh62tQQXhfJNycy8QgxZWGlOI9mcOpqZ98PjqhMOoxvx15vmN4Zt9zXQDfvqmPqIEp5zdRWUBArV63_6_a0maCKpE4Zgghwyr5vJJqQJS7Q_zFgLWuyYBNDSCOGlAoK2g8v9IhoXi9BpoXyGxC6vjQaC8wwEWvmPJeN2kLF-jo20hLSFoARI3tAxzs3olWCcN6j83t2IOqbWu2-7tddPmpvO8LA')"></div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative mb-20 flex flex-col md:flex-row-reverse items-center">
+<div class="md:w-1/2 md:pl-12 mb-8 md:mb-0">
+<div class="font-headline-lg text-headline-lg text-primary opacity-50 mb-2">2010</div>
+<h4 class="font-title-md text-title-md uppercase mb-3">Golden Era</h4>
+<p class="text-on-surface-variant font-body-sm">The 'Three-Peat' years. Panteras established a dynasty that would see three consecutive national titles and record-breaking attendance streaks.</p>
+</div>
+<div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-primary"></div>
+<div class="md:w-1/2 md:pr-12">
+<div class="w-full h-48 bg-cover bg-center border border-outline-variant" data-alt="A wide-angle, low-shot of a massive professional basketball stadium filled to capacity, with fans wearing glowing blue merchandise. A massive digital banner above the court displays 'CHAMPIONS' in bold Anton typography. The image captures the electric loyalty and stadium atmosphere of the Panteras' golden era." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEEO6HKphqRbE5DgwDl7ziswWIYuqWO_7Td5ODiyr9s6lt7Cez8GnAPJd3w0cz3RxJ3wYITvPIIuJKPQoiBuvRREJaIKk056ZHsQF3skCAAeTh9URnjPGxz2NoBJGXGvB5G9kjUABQOAPfn3k5MlGJL9jWk8ifgC-chOs-sQfdktPsMvE9KFcZk7_Ui82Qo8ieyKAdfZnWJJaU20mI1eMYDQD1F7k438cM7BOIZkUiwxwGkuC9LFUEPQ')"></div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+<div class="font-headline-lg text-headline-lg text-primary opacity-50 mb-2">Today</div>
+<h4 class="font-title-md text-title-md uppercase mb-3">Digital Evolution</h4>
+<p class="text-on-surface-variant font-body-sm">Pioneering the use of real-time analytics and biometric tracking to push the boundaries of human performance on the court.</p>
+</div>
+<div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-primary pulse shadow-[0_0_15px_#b6c4ff]"></div>
+<div class="md:w-1/2 md:pl-12">
+<div class="w-full h-48 bg-cover bg-center border border-primary" data-alt="A modern, high-tech visualization of a basketball player in mid-air dunk, with glowing electric blue data points and holographic stats floating around them. The background is a dark, sleek charcoal gym. This represents the 'Digital Evolution' of the Panteras, combining athletic agility with advanced technology." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrFVS-wrEp-JVhb2gh2d-4tTBx5j5YqwSfKb0QYqgi3_VMYiVmtPHCEDrq8PipEJCUesIgxcuc8qy5AHxuvx40VQxyb2Q4EvjWSv5EiVk9QPwwjsW9-pGtYFb0IRMtlef3xP5GkGVTRToJkRAtPN5X_qpj-xRPC8QBxFRu8brbPBtmM1Qwi5g4QLeFqrucMon0aCaBStqaecop1K0DP3_GfCYSwOW2ZhFFENXiGD2ouRiqSxh86ZZcgw')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery / Achievement Wall -->
+<section class="py-24 bg-surface-container-highest">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-4">Achievement Wall</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Our trophies are forged in sweat and persistence. View the moments that defined our path to glory.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="group relative aspect-square overflow-hidden bg-black">
+<div class="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" data-alt="A close-up shot of a gleaming silver basketball trophy sitting on a black velvet surface. Sharp, cool-toned lighting creates dramatic highlights and shadows on the metal. The Panteras logo is subtly engraved on the trophy's base. The overall mood is premium, victorious, and intimidating." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCW6Clr1KiRhTl28Jb48UpDC2G7X5fScWukapFbAeTn-SaoyAcowAWw0O8awOOh8HUEYQ02F2LZTn8_NxsyEEO05F5zooMEJIiwRNl7OpvbPgMxfzCR1o2jZxE2dPEpjFUAOfC9PokoQzVxnsANENWvNLYDj8iG5z1acpdhIr_66i0vXwfMSoWP7d4VEMjUcGdwR-WAMDDZ21XZSj2qT_PmS2MGT9EpkWsd8ZtTwBcl531_x-5lBT0Acw')"></div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-all duration-300"></div>
+</div>
+<div class="group relative aspect-square overflow-hidden bg-black md:col-span-2 md:row-span-2">
+<div class="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" data-alt="A dynamic, wide-action shot of the Panteras team huddling together before a big game. They are in their home white and electric blue uniforms. Dramatic lighting from above creates intense highlights on their jerseys and determined faces. The mood is one of electric loyalty and collective strength." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCM0KAaC7lI7jFOYxAReWNAdV3g4pEtogadgGMNh1KBpz6PGcxP7c4Sz8REIJIBsTbGcNh__BFCk5Hy6MOfci7R_Gw589-zySp7QGtWO11upNO1EZ-_gV25KKFlZ8GR-XRWEt08qJ3yHq39aZ8SSnghqp5XDLWbii9aw9FzVDBZbDAZYbjpNSq1h9G4C--pdTWEqcEj_y7EyGT4dk5A2sewpxsB8U1ZIGar2oAR5vbO2rmVYYXj09pY7g')"></div>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-caps text-label-caps">LATEST MOMENT</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-all duration-300"></div>
+</div>
+<div class="group relative aspect-square overflow-hidden bg-black">
+<div class="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" data-alt="A high-contrast photograph of a player's hand wearing a championship ring encrusted with blue and white diamonds. The lighting is extremely focused, creating a sparkling effect against a deep black background. This image represents the high-intensity performance and rewards of the Panteras circuit." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJynEgMB-Mx6VnQ-JvV4a8dph2eSHDAENCkG7Zd41Hur7EXrmFaVwwPJA1opmM2-z512qXe_9t5qBIvIJuE2OYXNlKHIgwmSZpXZucNhkXfex-X2-xXf_fJjgjW_LxLKNaLhXfUrhilfqLzNab8czkTuXz-BidGUf_ldtq1Xs93Y4p-KEhDaXV405Es_jGV3hMvAA4Mn0ne51nFjRYHBDMoo9gwF0_gfz0ecKZsBvq5l12p6HsnLPn7A')"></div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-all duration-300"></div>
+</div>
+<div class="group relative aspect-square overflow-hidden bg-black">
+<div class="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" data-alt="An artistic, blurred shot of a player performing a fast-break lay-up. The focus is on the movement, with electric blue light trails following the player's path. The background is a dark, out-of-focus arena. It emphasizes agility and forward-leaning motion." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDk4R4fevfyBNV1oEEMbYoOf2imshkjiQIVNpe54taPigNJCbxp0GIP_hofo3Yne8FNbUKNr4A1wnqdwwuNlKoZv1n1nFNkQW1TpS7-YrVIYo9VdxQwCcmOUR2z_conl9NDL1R3Kbj8MJaZflwMydev2dJnyvRE2-Y5pUGDJYZD8Sbm-6gt4kFK_zomtrAsNDYYn5nbQ_BgWza1ybN_esV1lFy-ZxVjMLVAqNBN_ChKpwN-he309KnXvg')"></div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-all duration-300"></div>
+</div>
+<div class="group relative aspect-square overflow-hidden bg-black">
+<div class="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" data-alt="A celebratory shot of the team lifting a championship trophy amidst falling blue and silver confetti. The lighting is bright and festive, yet maintains the high-contrast professional look of the Panteras brand. The faces of the players are filled with pure joy and triumph." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtQaNIhyuk3z-LSXcRaqzIo4yrlxUmiZ6cT8fPsvd52rphDdG5oaHDJ_oU6vRoQeOQp52MMgi8CgDhdZeKr1zqywAERxfmeKXLg6usvTPcENvcqapLiJPC3tQSUhkb4KT9x1d8gM1Saz6qa7uzjWDug7CDeLQALeaOADa9Q2MpL_gzGPnvGA0Lmi1DBA3nhCoVGcCafkYW1dpDKsEuzYk54yKgNoALAmElZ3gjG2VUdiIYD4K2D8ZVog')"></div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-all duration-300"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="relative py-32 overflow-hidden border-t-2 border-outline-variant">
+
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-display-xl text-headline-lg md:text-display-xl uppercase mb-8">Join the Pride</h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl mx-auto mb-10">Get exclusive team news, behind-the-scenes footage, and early access to tickets.</p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-4">
+<input class="bg-transparent border-b-2 border-on-surface text-on-surface font-label-caps p-3 w-full md:w-80 focus:border-primary outline-none transition-colors" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 uppercase tracking-widest shear-btn hover:bg-on-surface hover:text-background transition-all">
+                        Subscribe
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-4 border-primary mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter w-full max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-on-surface uppercase">PANTERAS</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Contact Us</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Press Kit</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right">
+                © 2024 PANTERAS BASKETBALL. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for gallery hover effects
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Potential for more advanced GSAP/JS animations here
+            });
+        });
+
+        // Sticky Header shrink effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

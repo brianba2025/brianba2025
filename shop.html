@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;700&family=Space+Grotesk:wght@700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@100..900&family=Hanken+Grotesk:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#e3e6ff",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary": "#c6c6c7",
+                        "on-primary-fixed-variant": "#0039b3",
+                        "inverse-on-surface": "#2e303a",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#32343f",
+                        "surface-bright": "#373943",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "outline": "#8d90a2",
+                        "outline-variant": "#434656",
+                        "secondary-container": "#4a4949",
+                        "inverse-surface": "#e1e1ef",
+                        "surface": "#11131c",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "background": "#11131c",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "surface-container-low": "#191b25",
+                        "on-surface": "#e1e1ef",
+                        "surface-container-lowest": "#0c0e17",
+                        "surface-dim": "#11131c",
+                        "secondary": "#c9c6c5",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-container-high": "#282933",
+                        "tertiary-container": "#666868",
+                        "on-primary-fixed": "#001551",
+                        "on-primary": "#002780",
+                        "on-surface-variant": "#c3c5d9",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "primary": "#b6c4ff",
+                        "surface-tint": "#b6c4ff",
+                        "on-tertiary": "#2f3131",
+                        "inverse-primary": "#004dea",
+                        "surface-container": "#1d1f29",
+                        "surface-variant": "#32343f",
+                        "primary-fixed": "#dce1ff",
+                        "primary-container": "#0055ff",
+                        "on-tertiary-container": "#e7e7e7",
+                        "on-background": "#e1e1ef",
+                        "on-secondary": "#313030",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "title-md": ["Hanken Grotesk"],
+                        "display-xl": ["Anton"],
+                        "body-sm": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "48px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "display-xl": ["96px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shear-container {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+        .skew-active {
+            transform: skewX(-12deg);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(182, 196, 255, 0.4);
+        }
+        .product-card-hover:hover .buy-now-btn {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface border-b-2 border-outline-variant fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg uppercase tracking-tighter text-primary dark:text-primary">
+                PANTERAS
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="shop.html">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="team.html">Team</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="lineup.html">Lineup</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container rounded-none border-b-2 border-outline px-3 py-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-caps font-label-caps text-on-surface w-32 placeholder:text-on-surface-variant" placeholder="SEARCH GEAR" type="text"/>
+</div>
+<div class="flex gap-4 items-center">
+<button class="relative">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-primary-container text-on-primary-container text-[10px] px-1.5 py-0.5 font-bold">2</span>
+</button>
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all duration-200 active:skew-x-12">
+                    Tickets
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-20 px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="mb-20 relative overflow-hidden h-[400px] flex items-center">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40 grayscale" data-alt="A cinematic, high-contrast wide shot of a professional basketball arena under dramatic electric blue lighting. The atmosphere is filled with a light mist or fog, catching the sharp beams of the overhead stadium lights. The court is dark charcoal wood, and the overall mood is aggressive, elite, and technologically advanced, echoing the Panteras basketball team aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6KBDaaP2o_h6Lv1I1eSQcGZhd0K80c2DNBsc6kPY5LEMe6Q-sobuBMYcdkfZIJynQTb09SZDqharL9pkiM417gDD5g7NNd-HLicZR8tDriAsc7z4MKl87t5jXM_K89ssPjqb8R1pSE7PLt0eMyCCSggg-Dsw44UYtGgyYqka72LEH_1Z_xCP8Gml1sosm2H14on3KfIXLG1f2fGU7ClbKdfKQ9bh1mbG9BtTncLnG2sF2yhNo6hJCYQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full md:w-2/3">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.3em] mb-4 block">OFFICIAL PERFORMANCE GEAR</span>
+<h1 class="font-display-xl text-display-xl uppercase italic -skew-x-6 text-on-surface mb-6">DOMINATE THE <span class="text-primary">COURT</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-8">Precision engineered for the highest level of play. Shop the latest Panteras collection and wear the pride of the circuit.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-surface transition-all">New Arrivals</button>
+<button class="border-2 border-outline text-on-surface px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-outline-variant transition-all">Member Exclusive</button>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<div class="flex flex-wrap gap-4 mb-12 border-b border-outline-variant pb-6">
+<button class="font-label-caps text-label-caps px-6 py-2 bg-primary text-on-primary">All Products</button>
+<button class="font-label-caps text-label-caps px-6 py-2 text-on-surface-variant hover:text-on-surface transition-colors">Jerseys</button>
+<button class="font-label-caps text-label-caps px-6 py-2 text-on-surface-variant hover:text-on-surface transition-colors">Hoodies</button>
+<button class="font-label-caps text-label-caps px-6 py-2 text-on-surface-variant hover:text-on-surface transition-colors">Footwear</button>
+<button class="font-label-caps text-label-caps px-6 py-2 text-on-surface-variant hover:text-on-surface transition-colors">Accessories</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1: Jersey -->
+<div class="group product-card-hover relative bg-surface-container p-4 border border-outline-variant/30 hover:border-primary transition-all duration-300">
+<div class="relative h-80 w-full mb-6 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500" data-alt="A professional product shot of the Panteras Basketball home jersey in deep black with electric blue side panels. The fabric has a high-tech breathable mesh texture. The Panteras logo is prominently displayed on the chest in a sharp, metallic blue finish. The lighting is crisp and studio-quality, highlighting the athletic contours and premium quality of the performance apparel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFdY8hqyGQ4kRwfx-qUTNh9bHoF1EknxXvBYttfcXogQg0NS5zONhkG3R7_elUYKtjfMG6oqAeMSBbxppmzBcyfBcV55ST0KVx6KckhpioKSDgqEhgwhBj3k9ToAuA8Z6trop9CWTRvLAoIhjJXyyvN8w5qP0nrQSxnYMUhbq3Q5c3jGSTLARCQjaocN7d40HUZgQFik79M7FfZhTafxv7fkHPl6GGc9yq8rzh4p1Rk_Txz8vUsqoD0g"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary font-label-caps text-[10px] px-2 py-1 uppercase">New Arrival</div>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<button class="w-10 h-10 bg-surface-container-highest flex items-center justify-center border border-outline hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface text-sm">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-primary tracking-widest uppercase">Performance Series</span>
+<h3 class="font-title-md text-title-md text-on-surface">PANTERAS HOME '24 JERSEY</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="font-headline-lg text-2xl text-on-surface">$120.00</span>
+<div class="flex gap-1">
+<div class="w-3 h-3 bg-black border border-outline"></div>
+<div class="w-3 h-3 bg-on-primary-container border border-outline"></div>
+</div>
+</div>
+</div>
+<button class="buy-now-btn mt-6 w-full bg-primary-container text-on-primary-container py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all transform md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">
+                    Buy Now
+                </button>
+</div>
+<!-- Product 2: Hoodie -->
+<div class="group product-card-hover relative bg-surface-container p-4 border border-outline-variant/30 hover:border-primary transition-all duration-300">
+<div class="relative h-80 w-full mb-6 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist studio photo of a premium heavyweight black hoodie from the Panteras Basketball collection. The hoodie features a large, slightly embossed electric blue Pantera logo on the back and a subtle team name on the front chest. The material looks thick and high-quality, with structured cuffs and a large hood. Dark, high-contrast mood with focused spotlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtpEeyzlUL4jvHmh8hC5h8YNpcKw6ZYv5QEM4vmLxBX6ucgKCnvy9tu595e6zYLMYzkiMHqPHSlqtWCBPQ75Y5heJe0TaKq8frXNSQIdBW4ahQXqijYhfNY_Utif6mBsXrOh7fwJ_0ns6z4QUTULaSeogq2XjAWQnMegkmSXSD6bgagHM7aJjm246NI5LXUCxCdnrJXOTOWGk79-n8BBV-RL6Gg2LsDcSDtf0SRK1xQC--P51wuRbeXQ"/>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<button class="w-10 h-10 bg-surface-container-highest flex items-center justify-center border border-outline hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface text-sm">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-primary tracking-widest uppercase">Streetwear</span>
+<h3 class="font-title-md text-title-md text-on-surface">CORE LOGO HEAVYWEIGHT HOODIE</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="font-headline-lg text-2xl text-on-surface">$85.00</span>
+</div>
+</div>
+<button class="buy-now-btn mt-6 w-full bg-primary-container text-on-primary-container py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all transform md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">
+                    Buy Now
+                </button>
+</div>
+<!-- Product 3: Basketball -->
+<div class="group product-card-hover relative bg-surface-container p-4 border border-outline-variant/30 hover:border-primary transition-all duration-300">
+<div class="relative h-80 w-full mb-6 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500" data-alt="A professional studio photograph of a premium official size-7 basketball. The ball is custom-designed for the Panteras team with a matte black finish and glowing electric blue channels/seams. The team's panther head logo is etched into the surface in a contrasting gloss finish. Sharp side lighting reveals the aggressive grip texture and high-end manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAS6g-UKOn0c2DsD1aeffUjfQWOeQZuojLq30aKxK9Gn-JH2mn6sdOvZzj7Udzsnhzy7P42j398tZXoYwsN_P5uO4tAbm9yDrmcUuO_gGox8k3jqkBzxvoRK9HZoqMO7TNYyviBdZFHdyVBVLuLp3LF_GFOHau2diCd-R2aPY9cgYikWxLsYshbxZcj-DgIBhAx7lwutzbjFBZi4ZzI1boPLLXnYKbR02xCrghE5BmQ6Vl81UbmU8I9g"/>
+<div class="absolute top-4 left-4 bg-error text-on-error font-label-caps text-[10px] px-2 py-1 uppercase">Limited</div>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<button class="w-10 h-10 bg-surface-container-highest flex items-center justify-center border border-outline hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface text-sm">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-primary tracking-widest uppercase">Equipment</span>
+<h3 class="font-title-md text-title-md text-on-surface">PANTERAS STEALTH OFFICIAL BALL</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="font-headline-lg text-2xl text-on-surface">$60.00</span>
+</div>
+</div>
+<button class="buy-now-btn mt-6 w-full bg-primary-container text-on-primary-container py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all transform md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">
+                    Buy Now
+                </button>
+</div>
+<!-- Product 4: Accessories -->
+<div class="group product-card-hover relative bg-surface-container p-4 border border-outline-variant/30 hover:border-primary transition-all duration-300">
+<div class="relative h-80 w-full mb-6 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality product layout showcasing Panteras basketball accessories. It includes a sleek black water bottle with a blue logo, a pair of premium cushioned athletic socks with team branding, and a high-performance headband. The items are arranged in a dynamic, geometric composition on a dark reflective surface, highlighting their premium materials and sharp design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwqM17DmOPKPLW0gBPQAv3O_84R8X5iBaWfN0d886wvZMU6ZO85_oApCDz4--t-ZDmegGVNqR0k6ahMvNRd7iZRHdvVYmWs5-NhclfEFLowVlMWygyU2A1QdMZ-DHsDlnnZwIYS3wjl23C-9EzFQXmG9pB76-5JM3TJGL_9INDpUval2yumUSeTyNkmUtZlkXVbIQ-n9DRY9kvSNTAxJdDxfHl9gDde0szCXrXWhGS30cvuNKU0wM4rg"/>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<button class="w-10 h-10 bg-surface-container-highest flex items-center justify-center border border-outline hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface text-sm">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-primary tracking-widest uppercase">Accessories</span>
+<h3 class="font-title-md text-title-md text-on-surface">ELITE ATHLETE PERFORMANCE BUNDLE</h3>
+<div class="flex justify-between items-end mt-2">
+<span class="font-headline-lg text-2xl text-on-surface">$45.00</span>
+</div>
+</div>
+<button class="buy-now-btn mt-6 w-full bg-primary-container text-on-primary-container py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all transform md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">
+                    Buy Now
+                </button>
+</div>
+</div>
+<!-- Featured Section (Bento Layout) -->
+<section class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 relative group overflow-hidden bg-surface-container h-[500px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0" data-alt="A powerful action shot of a professional basketball player wearing the Panteras jersey, captured in mid-air during a dynamic dunk. The lighting is intense, with high-contrast shadows and strong blue edge-lighting on the athlete's body. The background is a blurred stadium crowd in monochrome, keeping all focus on the speed and agility of the player." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCN0y1-QoVPZ7CbzWnV0gQTKek1jU0xAXDzZVPxDo-aB4ri_QGbjM2T42czdnqdm4K-_f9hkyvSxDsysh4zCmBVnKorOOxP1UdNwDCFfPHLecpLIOhMNJ5flgkfaUdePeS-MJVQroGI2cupgEvNm7Hr-XVgtO3kHRmG93MQjndpXAWDQTPtMdO9kAzFcQVYtnYpn7zNrSQD2RIVkmApS85sZ3rBSQYohJeXm6zbZFYZbWoW2KQ7C-xO1A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10">
+<h2 class="font-display-xl text-5xl uppercase italic text-on-surface mb-2">BUILT FOR <span class="text-primary">SPEED</span></h2>
+<p class="font-body-lg text-on-surface-variant max-w-sm mb-6">Experience the technology behind the jersey. Aero-mesh fabric for zero-distraction play.</p>
+<button class="bg-white text-black px-8 py-3 font-label-caps text-label-caps uppercase hover:bg-primary transition-colors">Learn More</button>
+</div>
+</div>
+<div class="flex flex-col gap-gutter">
+<div class="flex-1 relative group overflow-hidden bg-primary-container p-8 flex flex-col justify-end">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-20 transform translate-x-10 -translate-y-10 border-8 border-white rounded-full"></div>
+<span class="font-label-caps text-label-caps text-on-primary-container mb-2">EXCLUSIVE OFFER</span>
+<h3 class="font-headline-lg text-4xl text-on-primary-container leading-none mb-4 uppercase">PANTERAS MEMBER CLUB</h3>
+<p class="font-body-sm text-on-primary-container mb-6">Get 15% off your first order and early access to drops.</p>
+<button class="bg-black text-white px-6 py-2 font-label-caps text-label-caps uppercase w-fit">Join Now</button>
+</div>
+<div class="flex-1 bg-surface-container-highest p-8 border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="local_shipping">local_shipping</span>
+<h4 class="font-title-md text-on-surface uppercase">Free Shipping</h4>
+</div>
+<p class="font-body-sm text-on-surface-variant">On all orders over $150. Global delivery available within 3-5 business days.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t-4 border-primary mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter w-full max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="font-headline-lg text-headline-lg text-on-surface">PANTERAS</div>
+<p class="font-body-sm text-on-surface-variant max-w-xs text-center md:text-left">The official store of Panteras Basketball. High-performance gear for high-performance athletes.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Contact Us</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary" href="#">Press Kit</a>
+</div>
+<div class="flex flex-col items-center md:items-end gap-6">
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline hover:border-primary text-on-surface hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline hover:border-primary text-on-surface hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">video_library</span>
+</a>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 PANTERAS BASKETBALL. ALL RIGHTS RESERVED.</span>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.98)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

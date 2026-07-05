@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>PANTERAS BASKETBALL | PORTAL OFICIAL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;700&family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b6c4ff",
+                        "on-primary": "#002780",
+                        "background": "#11131c",
+                        "surface": "#1d1f29",
+                        "on-surface": "#e1e1ef",
+                        "primary-container": "#0055ff",
+                        "outline-variant": "#434656"
+                    },
+                    fontFamily: {
+                        "display": ["Anton"],
+                        "body": ["Hanken Grotesk"],
+                        "label": ["Space Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .skew-card { transform: skewX(-4deg); }
+        .skew-reverse { transform: skewX(4deg); }
+        .page-section { display: none; }
+        .page-section.active { display: block; animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .hard-shadow { box-shadow: 4px 4px 0px #ffffff; }
+        .hard-shadow:hover { box-shadow: 0px 0px 0px #ffffff; transform: translate(2px, 2px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+
+<header class="bg-background/90 backdrop-blur-md border-b-2 border-outline-variant fixed top-0 w-full z-50">
+    <nav class="flex justify-between items-center w-full px-6 md:px-10 py-4 max-w-7xl mx-auto">
+        <div class="font-display text-3xl md:text-4xl uppercase tracking-tighter text-primary cursor-pointer" onclick="showSection('home')">
+            PANTERAS
+        </div>
+        <div class="hidden md:flex items-center gap-8 font-label text-xs uppercase tracking-widest">
+            <button onclick="showSection('home')" class="nav-link text-primary border-b-2 border-primary pb-1" id="link-home">Inicio</button>
+            <button onclick="showSection('shop')" class="nav-link text-on-surface-variant hover:text-white transition-colors" id="link-shop">Tienda</button>
+            <button onclick="showSection('team')" class="nav-link text-on-surface-variant hover:text-white transition-colors" id="link-team">Equipo</button>
+            <button onclick="showSection('lineup')" class="nav-link text-on-surface-variant hover:text-white transition-colors" id="link-lineup">Plantilla</button>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">shopping_cart</span>
+            <button class="bg-primary text-on-primary font-label text-[10px] px-6 py-2 uppercase hard-shadow font-bold transition-all">Tickets</button>
+        </div>
+    </nav>
+</header>
+
+<main class="pt-20">
+    <!-- SECCIÓN: INICIO -->
+    <section id="home" class="page-section active">
+        <div class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB38u4Jdhp0BtVoffovFj7fugDa1UTZ9GJcqL-NaOdxhSvb6qSOiVfEhMTx-LjKWGjQW4nExI66Mk6HmDNB_gQMoYfPkOYhCKhORm4Dy6jXEulNJoB_bGjEdhFs023LnW7ugWLePIK3i4W_132_Yfa_rNIEqcwYYoEVhtiWAxvLMcrcPtMhttvFuAnOSNwkCqKGaHwOAckjyOB6SQLC5QsuvCdWVFLxET03_LWFhiJE0P7n8ihT78V-Pg')"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+            <div class="relative z-10 px-10 max-w-7xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-12 h-[2px] bg-primary"></span>
+                    <span class="font-label text-xs text-primary uppercase tracking-[0.3em]">Season 2024/25</span>
+                </div>
+                <h1 class="font-display text-6xl md:text-8xl uppercase mb-8 leading-none">DOMINA LAS <br/> <span class="text-primary italic">SOMBRAS</span></h1>
+                <p class="max-w-xl text-gray-300 mb-10 text-lg leading-relaxed">El equipo más agresivo del circuito pro. Precisión táctica, velocidad explosiva y un legado forjado en la victoria.</p>
+                <div class="flex gap-4">
+                    <button onclick="showSection('lineup')" class="bg-primary text-on-primary font-label px-10 py-5 hard-shadow skew-card transition-all font-bold uppercase"><span class="skew-reverse inline-block">VER EL SQUAD</span></button>
+                    <button onclick="showSection('shop')" class="border-2 border-primary text-primary font-label px-10 py-5 hover:bg-primary/10 skew-card transition-all font-bold uppercase"><span class="skew-reverse inline-block">EQUIPACIÓN '24</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TIENDA -->
+    <section id="shop" class="page-section py-20 px-10 max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-16 border-l-4 border-primary pl-6">
+            <div>
+                <h2 class="font-display text-5xl uppercase italic">Tienda Oficial</h2>
+                <p class="font-label text-xs text-primary mt-2 uppercase tracking-widest">Performance Gear para Pros</p>
+            </div>
+            <div class="hidden md:flex gap-4">
+                <button class="bg-primary text-on-primary px-4 py-2 text-[10px] font-bold uppercase skew-card"><span class="skew-reverse inline-block">RECIÉN LLEGADO</span></button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Producto 1 -->
+            <div class="bg-surface p-6 border border-gray-800 hover:border-primary transition-all group relative">
+                <div class="absolute top-4 left-4 bg-primary text-on-primary text-[8px] font-bold px-2 py-1 uppercase z-10">Premium</div>
+                <div class="h-80 bg-background mb-6 overflow-hidden flex items-center justify-center">
+                    <img class="w-full h-full object-contain transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFdY8hqyGQ4kRwfx-qUTNh9bHoF1EknxXvBYttfcXogQg0NS5zONhkG3R7_elUYKtjfMG6oqAeMSBbxppmzBcyfBcV55ST0KVx6KckhpioKSDgqEhgwhBj3k9ToAuA8Z6trop9CWTRvLAoIhjJXyyvN8w5qP0nrQSxnYMUhbq3Q5c3jGSTLARCQjaocN7d40HUZgQFik79M7FfZhTafxv7fkHPl6GGc9yq8rzh4p1Rk_Txz8vUsqoD0g"/>
+                </div>
+                <h3 class="font-bold text-primary uppercase tracking-widest text-sm">Jersey Panteras Home '24</h3>
+                <p class="text-3xl font-display mt-2">$120.00</p>
+                <button class="mt-6 w-full bg-primary-container text-white py-4 font-label text-xs hover:bg-primary transition-colors uppercase font-bold tracking-widest">AÑADIR AL CARRITO</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="bg-surface p-6 border border-gray-800 hover:border-primary transition-all group relative">
+                <div class="h-80 bg-background mb-6 overflow-hidden flex items-center justify-center">
+                    <img class="w-full h-full object-contain transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtpEeyzlUL4jvHmh8hC5h8YNpcKw6ZYv5QEM4vmLxBX6ucgKCnvy9tu595e6zYLMYzkiMHqPHSlqtWCBPQ75Y5heJe0TaKq8frXNSQIdBW4ahQXqijYhfNY_Utif6mBsXrOh7fwJ_0ns6z4QUTULaSeogq2XjAWQnMegkmSXSD6bgagHM7aJjm246NI5LXUCxCdnrJXOTOWGk79-n8BBV-RL6Gg2LsDcSDtf0SRK1xQC--P51wuRbeXQ"/>
+                </div>
+                <h3 class="font-bold text-primary uppercase tracking-widest text-sm">Hoodie Core Stealth</h3>
+                <p class="text-3xl font-display mt-2">$85.00</p>
+                <button class="mt-6 w-full bg-primary-container text-white py-4 font-label text-xs hover:bg-primary transition-colors uppercase font-bold tracking-widest">AÑADIR AL CARRITO</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="bg-surface p-6 border border-gray-800 hover:border-primary transition-all group relative">
+                <div class="h-80 bg-background mb-6 overflow-hidden flex items-center justify-center">
+                    <img class="w-full h-full object-contain transition-transform group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAS6g-UKOn0c2DsD1aeffUjfQWOeQZuojLq30aKxK9Gn-JH2mn6sdOvZzj7Udzsnhzy7P42j398tZXoYwsN_P5uO4tAbm9yDrmcUuO_gGox8k3jqkBzxvoRK9HZoqMO7TNYyviBdZFHdyVBVLuLp3LF_GFOHau2diCd-R2aPY9cgYikWxLsYshbxZcj-DgIBhAx7lwutzbjFBZi4ZzI1boPLLXnYKbR02xCrghE5BmQ6Vl81UbmU8I9g"/>
+                </div>
+                <h3 class="font-bold text-primary uppercase tracking-widest text-sm">Balón Oficial Competición</h3>
+                <p class="text-3xl font-display mt-2">$60.00</p>
+                <button class="mt-6 w-full bg-primary-container text-white py-4 font-label text-xs hover:bg-primary transition-colors uppercase font-bold tracking-widest">AÑADIR AL CARRITO</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: EQUIPO -->
+    <section id="team" class="page-section">
+        <div class="h-[500px] flex items-center justify-center bg-fixed bg-cover relative overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAw6fVmPGsUgTco-DqISXer78G92__ktQkSVeNP_my933-RR_8000IuZffiGXdErwcK975nxRkjIHuRPzxdJVepzPLPB8tRYPHSSSRFZ42I0ABqfKEBB2nt_RLcQUvyzkVYU0WQ7nRDqJZh8tqozvYnx4VDYLhf-I9qKzl6NFbEwqhygCvdaEIv6pnra4L6XN-ZCUd2bg8NHH20_yQfD9UUxnrVwpsBqcAr4AR9PXFApymHq0voRo1_tg')">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <h2 class="relative font-display text-6xl md:text-9xl uppercase italic text-primary drop-shadow-2xl">EL LEGADO</h2>
+        </div>
+        <div class="py-24 px-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div>
+                <span class="font-label text-xs text-primary uppercase tracking-widest mb-4 block">Desde 1988</span>
+                <h3 class="font-display text-5xl mb-8 uppercase italic leading-none">Cultura de <br/> Alto Rendimiento</h3>
+                <p class="text-gray-400 leading-relaxed mb-10 text-lg">Nacidos en el asfalto, evolucionamos hasta la élite digital. Panteras Basketball combina el instinto callejero con la analítica de datos más avanzada del mundo para dominar cada segundo del reloj.</p>
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-8">
+                    <div class="border-l-4 border-primary pl-4"><p class="text-4xl font-display">12</p><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">Ligas</p></div>
+                    <div class="border-l-4 border-primary pl-4"><p class="text-4xl font-display">28</p><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">All-Stars</p></div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-4 border-2 border-primary/20 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></div>
+                <img class="relative border-4 border-surface w-full grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd1LzcwNHEgq6msjOy1vvQMeA886nLu-3Dau6EiGJ0hDh3ZKk6PD1k56MtFZe4OOeFrqEcX87kawTppSDexKO8alw2unBF3-iZN2Dtwo9i3Bouh-xaQ_fXSpJQ2xfBSCnPl-PvjT-5FEMrjWc0vXhRmbHqbc6tEgAcMNuqxun0kclsN4HsXSghlEjNg3wURMg2eIv9wQ5JxI5nUVmiOfRfO9aQKQ5JBLZtM80LSCPPqRR0XKYCbR673w" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PLANTILLA -->
+    <section id="lineup" class="page-section py-24 px-10 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-8">
+            <div>
+                <h2 class="font-display text-6xl md:text-8xl uppercase italic text-primary leading-none">The Squad</h2>
+                <p class="font-label text-xs text-gray-500 mt-4 uppercase tracking-[0.4em]">Roster Activo Season 24/25</p>
+            </div>
+            <div class="flex gap-4">
+                <div class="bg-surface border border-outline-variant/30 px-6 py-4 skew-card">
+                    <div class="skew-reverse text-center">
+                        <p class="text-[10px] text-gray-500 uppercase font-bold mb-1">Win Rate</p>
+                        <p class="text-3xl font-display">92%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Jugador 1 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">05</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABn0q_j5MVDBdehBeMMGeBTUUCpxYnT9IX2t2twWim0Oz_jozAOPCGvF_ADeAO-JcfmxZv7tDua3v-vcdkhxEqU-v5oc9NBIc1_V_24R_EnFHarG35EWWcBM9Gmv4iS_QUZ7DZIuuxNki1PDC2gbKVGqXbFwN-DhS1uiOr6B9IV2ryg3eHMzTqlsMYnDOQ11IGVOiiegC4P_MNospGWdsRZGpgB3LG-j1pXew_QRZ8dgfFZd1KZufyUg"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Capitán / Alero</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">Marcus Thorne</h3>
+                <div class="mt-6 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div class="text-[10px] font-bold bg-white/10 px-2 py-1 uppercase">PPG: 28.4</div>
+                    <div class="text-[10px] font-bold bg-white/10 px-2 py-1 uppercase">RPG: 11.2</div>
+                </div>
+            </div>
+            <!-- Jugador 2 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">21</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnZIGtnqAc9IBtHxv__OIen5gaiov-6kDblh2WeUFM79UbKgFQ0ba74swG3VT_dZKZkmfnPcyYg-LCkKsB1Wz65CGFkxZjRwsEBgCgO7ycQgh1K1PF3m3aLkBZXpBX_61Ra6RaG9Wzh_w8GYwvdpsWBlHLiV8yBSyj867_cwImJaroouVXZnJUcak0TgRXi9XJhYsgjsI78Zvn6H-7bE51OxiEVCH7r3mEjyDq0VwcObNnh122twEvAA"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Base</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">Elena Rodriguez</h3>
+            </div>
+            <!-- Jugador 3 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">44</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTadvz2ID5LgwKp-ABY9uLlDf_j3FYZqS9KhjAtlLbtVoUilCYlgeXMqt8rKne320sLSFJ4Ie1KaZzoFNNftvLixm3-xB2vdTnclq89EWy-m6A9MtYKAN99G2PuKuvzZzrrLtTAesRF_tZyuaISguzfnCCaWGQGCe6wmmSmaH6RbJbVjmbfDvRug1D90q5xE1bHagt9wB_11ZZBAsLBHoHz5RmkDuCPNncjoyfyMnyhAvZ5z7PGAOY6w"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Pívot</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">David Chen</h3>
+            </div>
+            <!-- Jugador 4 -->
+            <div class="relative bg-surface p-6 border border-gray-800 group overflow-hidden hover:border-primary transition-all">
+                <div class="absolute top-4 right-4 text-6xl font-display text-primary/10 group-hover:text-primary/20 transition-colors">08</div>
+                <div class="h-96 bg-background mb-6 overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwtEuZP_mimc3eI0GyENUTEnvu2HDbNClALnJ5nz3IvgaUjAV1_oWMExYaHnwSisuXvJEt4xkdkTR2l5vq-o9m8vuItwR3szMeDaYfilTpLaXz4TNUWIrlRS1HhKCidSUybb4wjZQLoet5a2so9FEDJKLAqxJ47kZbfuFuIAcOH5xNPAIZzOS7emhAk6Bo60k24bUvpC1Lb0OFRId3QP4wiPuThnelghH_-setQCzejUAJuv1SvKgY2Q"/>
+                </div>
+                <p class="text-primary font-label text-[10px] font-bold uppercase mb-2 tracking-widest">Escolta</p>
+                <h3 class="text-3xl font-display uppercase leading-none italic group-hover:text-primary transition-colors">Jaxon Rivera</h3>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-black py-16 mt-20 border-t-4 border-primary">
+    <div class="px-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+        <div class="flex flex-col gap-4">
+            <div class="font-display text-4xl uppercase text-primary">PANTERAS</div>
+            <p class="max-w-xs text-gray-500 font-body text-sm">Portal oficial de Panteras Basketball. La vanguardia del deporte pro.</p>
+        </div>
+        <div class="flex flex-col gap-4 items-center md:items-end">
+            <div class="flex gap-6">
+                <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">facebook</span>
+                <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">sports_basketball</span>
+                <span class="material-symbols-outlined text-gray-500 hover:text-primary cursor-pointer transition-colors">alternate_email</span>
+            </div>
+            <p class="font-label text-[10px] uppercase tracking-[0.2em] text-gray-600">© 2024 PANTERAS BASKETBALL. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Ocultar todas las secciones
+        document.querySelectorAll('.page-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        // Mostrar la seleccionada
+        document.getElementById(sectionId).classList.add('active');
+
+        // Actualizar links de navegación visualmente
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('text-primary', 'border-b-2', 'border-primary');
+            link.classList.add('text-on-surface-variant');
+        });
+        const activeLink = document.getElementById('link-' + sectionId);
+        if (activeLink) {
+            activeLink.classList.remove('text-on-surface-variant');
+            activeLink.classList.add('text-primary', 'border-b-2', 'border-primary');
+        }
+
+        // Hacer scroll al inicio suavemente
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
